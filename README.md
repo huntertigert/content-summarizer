@@ -18,7 +18,7 @@ A lightweight CLI tool that uses the Claude AI API to instantly summarize articl
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/content-summarizer.git
+git clone https://github.com/huntertigert/content-summarizer.git
 cd content-summarizer
 npm install
 ```
