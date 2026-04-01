@@ -31,8 +31,6 @@ Create a `.env` file in the root of the project:
 ANTHROPIC_API_KEY=your_api_key_here
 ```
 
-> ⚠️ Never commit your `.env` file. It's listed in `.gitignore` by default.
-
 ## 🛠️ Usage
 
 Run the summarizer with:
