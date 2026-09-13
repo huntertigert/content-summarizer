@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-ink: #1B1F27;
+  --color-paper: #F2F1ED;
+  --color-surface: #FFFFFF;
+  --color-pine: #2D5C4E;
+  --color-pine-dark: #234A3E;
+  --color-line: #DEDCD6;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
