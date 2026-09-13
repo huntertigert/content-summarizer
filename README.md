@@ -1,6 +1,6 @@
 # Caption Kit
 
-![Caption Kit screenshot](./assets/img/content-caption-kit.png)
+![Caption Kit screenshot](./src/assets/img/content-caption-kit.png)
 
 Paste in an article and get ready-to-post captions for Twitter/X, LinkedIn, and Instagram — tailored to each platform's tone and character limits.
 
