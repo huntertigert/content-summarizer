@@ -1,16 +1,29 @@
-# React + Vite
+# Caption Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Caption Kit screenshot](./assets/img/content-caption-kit.png)
 
-Currently, two official plugins are available:
+Paste in an article and get ready-to-post captions for Twitter/X, LinkedIn, and Instagram — tailored to each platform's tone and character limits.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[Live demo →](https://content-summarizer-dcn8cvq8l-alk2.vercel.app/)
 
-## React Compiler
+## What it does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Long-form content (articles, blog posts, announcements) doesn't map cleanly to social media. Caption Kit takes a pasted article and generates three platform-specific captions in one pass, so you're not manually rewriting the same idea three different ways.
 
-## Expanding the ESLint configuration
+- Validates input length before sending it anywhere
+- Enforces Twitter/X's 280-character limit server-side, even if the model overshoots
+- Copy-to-clipboard on each result, with live character counts per platform
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How it works
+
+The frontend is a static React app. When you hit "Summarize," it calls a Vercel serverless function (`/api/summarize`), which is the only place the Anthropic API key ever lives — it's never exposed to the browser. That function calls Claude, asks for structured JSON output (one field per platform), and returns it to the frontend for display.
+
+
+Run with Vercel's dev server (needed so the `/api` function works locally, not just the frontend):
+```bash
+vercel dev
+```
+
+## Author
+
+**Hunter Tigert** — [huntertigert.com](https://huntertigert.com) · [LinkedIn](https://www.linkedin.com/in/hunter-tigert)
